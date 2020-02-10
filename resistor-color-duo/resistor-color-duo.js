@@ -1,3 +1,20 @@
-export const decodedValue = () => {
-  throw new Error("Remove this statement and implement this function");
+export const colors = {
+  "black" : "0",
+  "brown" : "1",
+  "red" : "2",
+  "orange": "3",
+  "yellow": "4",
+  "green": "5",
+  "blue": "6",
+  "violet": "7",
+  "grey": "8",
+  "white": "9"
 };
+
+export const decodedValue = (arr) => {
+  const getFirstStrFromArr = colors[arr[0]]
+  const getSecondStrFromArr = colors[arr[1]]
+  const num = `${getFirstStrFromArr}${getSecondStrFromArr}`
+  return parseInt(num)
+};
+
