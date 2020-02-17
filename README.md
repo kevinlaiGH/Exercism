@@ -1,1 +1,1 @@
-# exercism-js
+# Exercism
