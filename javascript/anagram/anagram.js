@@ -10,4 +10,6 @@ export const findAnagrams = (str,arr) => {
   return isAnagram
 }
 
+// Haven't passed the following tests
 // findAnagrams('BANANA', ['BANANA', 'Banana', 'banana'])
+// findAnagrams('LISTEN', ['Listen', 'Silent', 'LISTEN'])
