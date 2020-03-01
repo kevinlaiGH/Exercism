@@ -1,26 +1,13 @@
-const findAnagrams = (str,arr) => {
-  let splitStr = [...str].sort((a, b) => a.localeCompare(b)).join("").toLowerCase()
-  // console.log("splitStr is",splitStr)
+export const findAnagrams = (str,arr) => {
   let isAnagram = []
-
+  let processed = (z) => [...z].sort((a, b) => a.localeCompare(b)).join("").toLowerCase()
 
   for ( let i of arr){
-    let newTest = [...i].sort((a, b) => a.localeCompare(b)).join("").toLowerCase()
-    // console.log("newTest is", newTest)
-
-    if (newTest === splitStr){
+    if (processed(i) === processed(str)){
       isAnagram.push(i)
     }
   }
-  // return isAnagram
-  console.log(isAnagram)
+  return isAnagram
 }
-
-// if index 1,2,3,4,5 = index 1,2,3,4,5 => return
-
-findAnagrams('diaper', ['hello', 'world', 'zombies', 'pants'])
-findAnagrams('master', ['stream', 'pigeon', 'maters'])
-findAnagrams('nose', ['Eons', 'ONES'])
-findAnagrams('Orchestra', ['cashregister', 'Carthorse', 'radishes'])
 
 // findAnagrams('BANANA', ['BANANA', 'Banana', 'banana'])

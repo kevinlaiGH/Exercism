@@ -51,7 +51,7 @@ describe('Anagram', () => {
     ).toEqual(['Carthorse']);
   });
 
-  xtest('detects anagrams using case-insensitive subject', () => {
+  test('detects anagrams using case-insensitive subject', () => {
     expect(
       findAnagrams('Orchestra', ['cashregister', 'carthorse', 'radishes'])
     ).toEqual(['carthorse']);
